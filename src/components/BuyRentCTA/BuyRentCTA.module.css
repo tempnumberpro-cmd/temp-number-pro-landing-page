@@ -1,0 +1,49 @@
+.section {
+  padding: 32px 0 24px;
+  background: #fff;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.arrow {
+  flex-shrink: 0;
+}
+
+.btns {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btnBlue {
+  padding: 13px 32px;
+  background: var(--blue-primary);
+  color: #fff;
+  border-radius: 28px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.btnBlue:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37,99,235,0.3);
+}
+
+.btnDark {
+  padding: 13px 32px;
+  background: #1e293b;
+  color: #fff;
+  border-radius: 28px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.btnDark:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}

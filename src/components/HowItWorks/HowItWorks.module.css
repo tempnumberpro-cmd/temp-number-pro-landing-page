@@ -1,0 +1,104 @@
+.section {
+  padding: 80px 0;
+  background: var(--blue-lighter);
+}
+
+.heading {
+  text-align: center;
+  font-size: clamp(18px, 2.8vw, 24px);
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.4;
+  margin-bottom: 64px;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.stepRow {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  position: relative;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.textCol {
+  flex: 1;
+}
+
+.stepNum {
+  width: 36px;
+  height: 36px;
+  background: var(--blue-primary);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 14px;
+}
+
+.stepTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.stepDesc {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.arrow {
+  position: absolute;
+  bottom: -36px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.illustCol {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.illustCircle {
+  width: 160px;
+  height: 160px;
+  background: #dbeafe;
+  border-radius: 50% 50% 50% 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 32px rgba(37,99,235,0.12);
+  animation: float 3.5s ease-in-out infinite;
+}
+
+.illustEmoji {
+  font-size: 56px;
+  line-height: 1;
+}
+
+@media (max-width: 640px) {
+  .stepRow, .reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+  .stepNum { margin: 0 auto 14px; }
+  .arrow { display: none; }
+}

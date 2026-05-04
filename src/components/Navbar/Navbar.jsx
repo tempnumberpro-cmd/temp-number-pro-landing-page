@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import { FiGlobe, FiMenu, FiX, FiChevronDown } from 'react-icons/fi'
-import { FaGooglePlay } from 'react-icons/fa'
 import styles from './Navbar.module.css'
 
 const navLinks = [
@@ -51,12 +50,6 @@ export default function Navbar() {
 
         {/* Actions */}
         <div className={styles.actions}>
-          <a href="https://play.google.com/store/apps/details?id=com.tempnumberpro" target="_blank" rel="noopener noreferrer" className={styles.playStoreBtn}>
-            <FaGooglePlay size={16} />
-            Play Store
-          </a>
-          <button className={styles.btnOutline}>Sign Up</button>
-          <button className={styles.btnOutline}>Log In</button>
           <button className={styles.langBtn}>
             <FiGlobe size={18} />
             <FiChevronDown size={14} />
@@ -83,12 +76,6 @@ export default function Navbar() {
             </a>
           ))}
           <div className={styles.mobileActions}>
-            <a href="https://play.google.com/store/apps/details?id=com.tempnumberpro" target="_blank" rel="noopener noreferrer" className={styles.playStoreBtn}>
-              <FaGooglePlay size={16} />
-              Play Store
-            </a>
-            <button className={styles.btnOutline}>Sign Up</button>
-            <button className={styles.btnOutline}>Log In</button>
           </div>
         </div>
       )}

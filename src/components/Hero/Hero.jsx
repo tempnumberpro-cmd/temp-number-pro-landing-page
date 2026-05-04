@@ -5,7 +5,6 @@ import {
   FaLinkedin, FaAmazon
 } from 'react-icons/fa'
 import { FiArrowDown } from 'react-icons/fi'
-import { FaGooglePlay, FaApple } from 'react-icons/fa'
 
 const floatingIcons = [
   { Icon: FaTelegram, color: '#0088cc', top: '8%',  left: '52%',  delay: '0s' },
@@ -26,7 +25,7 @@ export default function Hero() {
       <div className={`container ${styles.inner}`}>
         {/* Left column */}
         <div className={styles.left}>
-          <h1 className={styles.heading}>Receive SMS Online Instantly</h1>
+          <h1 className={styles.heading}>Receive SMS online</h1>
           <p className={styles.sub}>
             Register on social networks, marketplaces, exchanges and online
             services <strong>without spam</strong> and{' '}
@@ -36,47 +35,22 @@ export default function Hero() {
             <button className={styles.btnWhite}>Receive SMS</button>
             <button className={styles.btnOutline}>Rent number</button>
           </div>
-
-          <div className={styles.appDownload}>
-            <p className={styles.downloadLabel}>Download our app</p>
-            <div className={styles.storeButtons}>
-              <a href="https://play.google.com/store/apps/details?id=com.tempnumberpro" target="_blank" rel="noopener noreferrer" className={styles.storeBtn}>
-                <FaGooglePlay size={16} />
-                <span>Google Play</span>
-              </a>
-              <a href="https://apps.apple.com/app/tempnumberpro" target="_blank" rel="noopener noreferrer" className={styles.storeBtn}>
-                <FaApple size={16} />
-                <span>App Store</span>
-              </a>
-            </div>
-          </div>
         </div>
 
         {/* Right column – phone mockup + floating icons */}
         <div className={styles.right}>
           {/* Badge */}
-          <div className={styles.badge}>
-            <span className={styles.badgeText}>1000+</span>
-            <span className={styles.badgeSub}>Happy Users</span>
-          </div>
+          <div className={styles.badge}>1000+</div>
 
           {/* Phone */}
-          <div className={styles.phoneContainer}>
-            <div className={styles.phone}>
-              <div className={styles.phoneNotch} />
-              <div className={styles.phoneScreen}>
-                {/* SMS bubble on phone */}
-                <div className={styles.phoneHeader}>
-                  <span className={styles.carrier}>TempNumber Pro</span>
-                  <span className={styles.time}>9:41</span>
-                </div>
-                <div className={styles.smsBubble}>
-                  <span>Your SMS code for registration in the service is 12344. Enter it on the site! 🐻</span>
-                </div>
+          <div className={styles.phone}>
+            <div className={styles.phoneSpeaker} />
+            <div className={styles.phoneScreen}>
+              {/* SMS bubble on phone */}
+              <div className={styles.smsBubble}>
+                <span>Your SMS code for registration in the service is 12344. Enter it on the site! 🐻</span>
               </div>
-              <div className={styles.phoneHome} />
             </div>
-            <div className={styles.phoneGlow} />
           </div>
 
           {/* Floating service icons */}

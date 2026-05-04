@@ -45,16 +45,12 @@
   text-decoration: underline;
   transition: color 0.15s;
 }
-
-.link:hover {
-  color: #fef08a;
-}
+.link:hover { color: #fef08a; }
 
 .ctaRow {
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
-  margin-bottom: 32px;
 }
 
 .btnWhite {
@@ -67,15 +63,11 @@
   border: 2px solid transparent;
   transition: transform 0.15s, box-shadow 0.15s;
 }
-
 .btnWhite:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(255,255,255,0.25);
 }
-
-.btnWhite:active {
-  transform: scale(0.97);
-}
+.btnWhite:active { transform: scale(0.97); }
 
 .btnOutline {
   padding: 13px 30px;
@@ -87,57 +79,11 @@
   border: 2px solid rgba(255,255,255,0.6);
   transition: border-color 0.15s, transform 0.15s;
 }
-
 .btnOutline:hover {
   border-color: #fff;
   transform: translateY(-2px);
 }
-
-.btnOutline:active {
-  transform: scale(0.97);
-}
-
-.appDownload {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.downloadLabel {
-  font-size: 13px;
-  font-weight: 600;
-  color: rgba(255,255,255,0.8);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.storeButtons {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.storeBtn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 16px;
-  background: rgba(255,255,255,0.2);
-  color: #fff;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: 600;
-  text-decoration: none;
-  border: 1px solid rgba(255,255,255,0.3);
-  backdrop-filter: blur(10px);
-  transition: all 0.2s;
-}
-
-.storeBtn:hover {
-  background: rgba(255,255,255,0.3);
-  border-color: rgba(255,255,255,0.5);
-  transform: translateY(-2px);
-}
+.btnOutline:active { transform: scale(0.97); }
 
 /* Right */
 .right {
@@ -157,169 +103,76 @@
   background: #fff;
   color: var(--blue-dark);
   font-weight: 800;
-  padding: 10px 16px;
+  font-size: 15px;
+  padding: 6px 14px;
   border-radius: 20px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
   animation: float 3s ease-in-out infinite;
   z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px;
-}
-
-.badgeText {
-  font-size: 16px;
-}
-
-.badgeSub {
-  font-size: 11px;
-  color: var(--blue-primary);
-  opacity: 0.8;
-}
-
-/* Phone container with glow */
-.phoneContainer {
-  position: relative;
-}
-
-.phoneGlow {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 250px;
-  height: 250px;
-  background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 0;
 }
 
 /* Phone mockup */
 .phone {
-  width: 200px;
-  height: 380px;
+  width: 190px;
+  height: 360px;
   background: #fff;
-  border-radius: 40px;
-  box-shadow: 0 30px 80px rgba(0,0,0,0.35), inset 0 0 0 1px rgba(0,0,0,0.08);
+  border-radius: 28px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
   position: relative;
   z-index: 1;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  border: 8px solid #e8f0fe;
+  border: 6px solid #e8f0fe;
 }
 
-.phoneNotch {
-  width: 120px;
-  height: 24px;
-  background: #1e293b;
-  border-radius: 0 0 20px 20px;
-  margin: 0 auto;
-  margin-top: 4px;
+.phoneSpeaker {
+  width: 48px;
+  height: 5px;
+  background: #d1d5db;
+  border-radius: 3px;
+  margin: 14px auto 8px;
 }
 
 .phoneScreen {
   flex: 1;
   background: linear-gradient(180deg, #eff6ff 0%, #dbeafe 100%);
   display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-.phoneHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6px 14px;
-  font-size: 11px;
-  color: #1e293b;
-  font-weight: 600;
-}
-
-.carrier {
-  flex: 1;
-  text-align: left;
-}
-
-.time {
-  text-align: right;
+  align-items: flex-end;
+  padding: 12px;
 }
 
 .smsBubble {
-  background: linear-gradient(135deg, #fff 0%, #f0f9ff 100%);
-  border-radius: 16px 16px 16px 2px;
-  padding: 12px 14px;
-  font-size: 11px;
+  background: #fff;
+  border-radius: 12px 12px 12px 2px;
+  padding: 10px 12px;
+  font-size: 10px;
   line-height: 1.5;
   color: #1e293b;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
   animation: float 4s ease-in-out infinite;
   animation-delay: 0.5s;
-  margin: auto 10px 10px;
-  max-width: 160px;
-  font-weight: 500;
-}
-
-.phoneHome {
-  width: 30px;
-  height: 3px;
-  background: #1e293b;
-  border-radius: 3px;
-  margin: 8px auto 6px;
 }
 
 /* Floating icons */
 .floatIcon {
   position: absolute;
-  width: 48px;
-  height: 48px;
+  width: 42px;
+  height: 42px;
   background: #fff;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
   z-index: 2;
-  border: 2px solid rgba(255,255,255,0.5);
 }
 
 .floatA {
   animation: float 3.5s ease-in-out infinite;
 }
-
 .floatB {
   animation: floatAlt 4s ease-in-out infinite;
-}
-
-/* Animations */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-12px);
-  }
-}
-
-@keyframes floatAlt {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-15px);
-  }
 }
 
 /* Check row */
@@ -337,10 +190,7 @@
   font-weight: 600;
   transition: color 0.15s;
 }
-
-.checkLink:hover {
-  color: #fef08a;
-}
+.checkLink:hover { color: #fef08a; }
 
 @media (max-width: 768px) {
   .inner {
@@ -348,20 +198,8 @@
     min-height: auto;
     text-align: center;
   }
-  .left {
-    max-width: 100%;
-  }
-  .sub {
-    margin: 0 auto 28px;
-  }
-  .ctaRow {
-    justify-content: center;
-  }
-  .storeButtons {
-    justify-content: center;
-  }
-  .right {
-    width: 100%;
-    min-height: 320px;
-  }
+  .left { max-width: 100%; }
+  .sub { margin: 0 auto 28px; }
+  .ctaRow { justify-content: center; }
+  .right { width: 100%; min-height: 320px; }
 }

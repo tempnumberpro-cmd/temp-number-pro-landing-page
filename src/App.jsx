@@ -9,8 +9,9 @@ import HowItWorks from './components/HowItWorks/HowItWorks'
 import BuyRentCTA from './components/BuyRentCTA/BuyRentCTA'
 import VirtualNumberDesc from './components/VirtualNumberDesc/VirtualNumberDesc'
 import FeaturesGrid from './components/FeaturesGrid/FeaturesGrid'
-import ApiBanner from './components/ApiBanner/ApiBanner'
 import FAQ from './components/FAQ/FAQ'
+import ReferralProgram from './components/ReferralProgram/ReferralProgram'
+import BlogSection from './components/BlogSection/BlogSection'
 import Footer from './components/Footer/Footer'
 
 export default function App() {
@@ -27,8 +28,9 @@ export default function App() {
       <BuyRentCTA />
       <VirtualNumberDesc />
       <FeaturesGrid />
-      <ApiBanner />
       <FAQ />
+      <BlogSection />
+      <ReferralProgram />
       <Footer />
     </div>
   )

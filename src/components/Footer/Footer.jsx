@@ -2,7 +2,7 @@ import { FaFacebook, FaTwitter, FaInstagram, FaYoutube, FaTelegramPlane } from '
 import styles from './Footer.module.css'
 
 const links = [
-  'Receive SMS online', 'Rent', 'API connection', 'Referral program',
+  'Receive SMS online', 'Rent', 'Referral Program',
   'Partnership', 'Partners', 'Blog', 'Help',
 ]
 

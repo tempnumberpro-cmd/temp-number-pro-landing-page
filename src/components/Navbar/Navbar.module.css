@@ -117,6 +117,27 @@
   color: var(--blue-primary);
 }
 
+.playStoreBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 16px;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: #fff;
+  font-size: 13.5px;
+  font-weight: 600;
+  border-radius: 20px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+}
+.playStoreBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(37, 99, 235, 0.3);
+}
+.playStoreBtn:active {
+  transform: scale(0.97);
+}
+
 /* Hamburger */
 .hamburger {
   display: none;

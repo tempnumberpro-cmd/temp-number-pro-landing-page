@@ -1,7 +1,4 @@
 import { FaFacebook, FaTwitter, FaInstagram, FaYoutube, FaTelegramPlane } from 'react-icons/fa'
-import appleStoreWhite from '../../../assets/apple-store-button-white.png'
-import googlePlayWhite from '../../../assets/google-play-icon-white.png'
-import simIcon from '../../../assets/sim-card-icon.png'
 import styles from './Footer.module.css'
 
 const links = [
@@ -14,7 +11,7 @@ export default function Footer() {
       <div className="container">
         {/* Logo */}
         <div className={styles.logo}>
-          <img src={simIcon} alt="TEMP NUMBER PRO" className={styles.logoIcon} />
+          <img src="/assets/sim-card-icon.png" alt="TEMP NUMBER PRO" className={styles.logoIcon} />
           <span className={styles.logoBox}>TEMP NUMBER</span>
           <span className={styles.logoText}>PRO</span>
         </div>
@@ -29,10 +26,10 @@ export default function Footer() {
 
           <div className={styles.storeRow}>
             <a href="#" className={styles.storeLink} aria-label="Get it on Google Play">
-              <img src={googlePlayWhite} alt="Get it on Google Play" className={styles.storeBadge} />
+              <img src="/assets/google-play-icon-white.png" alt="Get it on Google Play" className={styles.storeBadge} />
             </a>
             <a href="#" className={styles.storeLink} aria-label="Download on the App Store">
-              <img src={appleStoreWhite} alt="Download on the App Store" className={styles.storeBadge} />
+              <img src="/assets/apple-store-button-white.png" alt="Download on the App Store" className={styles.storeBadge} />
             </a>
             
           </div>

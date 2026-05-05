@@ -1,6 +1,5 @@
 import { FaGithub, FaFacebook, FaTwitter, FaGoogle } from 'react-icons/fa'
 import styles from './VirtualNumberDesc.module.css'
-import phoneFrame from '../../../assets/full-mobile-phone-frame.png'
 
 export default function VirtualNumberDesc() {
   return (
@@ -28,7 +27,7 @@ export default function VirtualNumberDesc() {
 
           {/* Sign Up phone preview */}
           <div className={styles.phoneFrameWrap} aria-label="Sign up form shown inside mobile app frame">
-            <img src={phoneFrame} alt="" className={styles.phoneFrame} aria-hidden="true" />
+            <img src="/assets/full-mobile-phone-frame.png" alt="" className={styles.phoneFrame} aria-hidden="true" />
             <div className={styles.phoneScreen}>
               <div className={styles.signUpCard}>
                 <h3 className={styles.cardTitle}>Sign Up</h3>

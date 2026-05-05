@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import { FiMenu, FiX, FiChevronDown } from 'react-icons/fi'
-import simIcon from '../../../assets/sim-card-icon.png'
 import styles from './Navbar.module.css'
 
 const navLinks = [
@@ -97,7 +96,7 @@ export default function Navbar() {
       <div className={`container ${styles.inner}`}>
         {/* Logo */}
         <a href="#home" className={styles.logo}>
-          <img src={simIcon} alt="TEMP NUMBER PRO" className={styles.logoIcon} />
+          <img src="/assets/sim-card-icon.png" alt="TEMP NUMBER PRO" className={styles.logoIcon} />
           <span className={styles.logoBox}>TEMP NUMBER</span>
           <span className={styles.logoText}>PRO</span>
         </a>

@@ -194,24 +194,24 @@
   position: absolute;
   bottom: 10%;
   left: 50%;
+  width: min(520px, 88vw);
   text-align: center;
-
-  /* transform: translateX(-50%); */
+  transform: translateX(-50%);
   z-index: 4;
 }
 
 .smsBubble {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.95) 100%);
   border-radius: 24px 24px 24px 24px;
-  padding: 20px 28px;
-  font-size: 20px;
+  padding: clamp(12px, 2.4vw, 20px) clamp(16px, 3vw, 28px);
+  font-size: clamp(14px, 2.1vw, 20px);
   line-height: 1.6;
   color: #1e3a8a;
   font-weight: 500;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2), 0 4px 12px rgba(0, 0, 0, 0.12);
-  width: max-content;
-  max-width: 70%;
+  width: 100%;
   text-align: center;
+  overflow-wrap: break-word;
   animation: slideInDown 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) both;
 }
 
@@ -260,12 +260,12 @@
 @keyframes slideInDown {
   from {
     opacity: 0;
-    transform: translateX(-50%) translateY(-30px);
+    transform: translateY(-30px);
   }
 
   to {
     opacity: 1;
-    transform: translateX(-50%) translateY(0);
+    transform: translateY(0);
   }
 }
 
@@ -331,5 +331,14 @@
   .right {
     width: 100%;
     min-height: 320px;
+  }
+
+  .smsBubbleWrapper {
+    bottom: 7%;
+    width: min(360px, 92vw);
+  }
+
+  .smsBubble {
+    line-height: 1.45;
   }
 }

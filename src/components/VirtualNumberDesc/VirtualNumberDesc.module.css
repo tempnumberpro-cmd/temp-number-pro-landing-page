@@ -79,32 +79,68 @@
   font-weight: 500;
 }
 
-/* Sign Up Card */
+/* Sign Up phone preview */
+.phoneFrameWrap {
+  position: relative;
+  width: min(100%, 320px);
+  aspect-ratio: 1 / 2;
+  margin-top: 4px;
+  filter: drop-shadow(0 22px 48px rgba(15, 23, 42, 0.18));
+  overflow: visible;
+}
+
+.phoneFrame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  width: auto;
+  height: 106%;
+  max-width: none;
+  object-fit: contain;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.phoneScreen {
+  position: absolute;
+  inset: 2.5% 4.4% 2.5%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 34px;
+  background:
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.16), transparent 42%),
+    linear-gradient(180deg, #f8fbff 0%, #eef5ff 100%);
+}
+
 .signUpCard {
-  background: #fff;
-  border-radius: var(--radius-lg);
-  padding: 28px 28px 24px;
-  box-shadow: var(--shadow-md);
-  max-width: 380px;
+  width: 100%;
+  padding: 24px 18px 20px;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
 }
 
 .cardTitle {
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 700;
   color: var(--text-dark);
-  margin-bottom: 18px;
+  margin-bottom: 16px;
   text-align: center;
 }
 
 .input {
   display: block;
   width: 100%;
-  padding: 11px 16px;
+  padding: 11px 14px;
   border: 1.5px solid var(--border);
   border-radius: 8px;
-  font-size: 14px;
+  font-size: 13px;
   color: var(--text-dark);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   transition: border-color 0.15s;
 }
 .input:focus { border-color: var(--blue-primary); }
@@ -113,13 +149,13 @@
 .signUpBtn {
   display: block;
   width: 100%;
-  padding: 13px;
+  padding: 12px;
   background: var(--blue-primary);
   color: #fff;
   border-radius: 8px;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
-  margin-bottom: 12px;
+  margin-bottom: 11px;
   transition: transform 0.15s, box-shadow 0.15s;
 }
 .signUpBtn:hover {
@@ -129,29 +165,29 @@
 
 .signIn {
   text-align: center;
-  font-size: 13px;
+  font-size: 12px;
   color: var(--text-muted);
-  margin-bottom: 10px;
+  margin-bottom: 9px;
 }
 .signInLink { color: var(--blue-primary); font-weight: 500; }
 .signInLink:hover { text-decoration: underline; }
 
 .orText {
   text-align: center;
-  font-size: 12px;
+  font-size: 11px;
   color: var(--text-muted);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .socialRow {
   display: flex;
-  gap: 8px;
+  gap: 7px;
   justify-content: center;
 }
 
 .socialBtn {
-  width: 36px;
-  height: 36px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -169,5 +205,6 @@
 @media (max-width: 768px) {
   .inner { flex-direction: column; }
   .left { min-height: auto; }
-  .signUpCard { max-width: 100%; }
+  .right { width: 100%; align-items: center; }
+  .phoneFrameWrap { width: min(100%, 300px); }
 }

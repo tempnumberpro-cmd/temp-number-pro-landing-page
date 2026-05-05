@@ -90,6 +90,7 @@
 }
 
 .illustEmoji {
+  color: var(--blue-primary);
   font-size: 56px;
   line-height: 1;
 }

@@ -1,26 +1,27 @@
+import { FiMessageSquare, FiMonitor, FiSmartphone } from 'react-icons/fi'
 import styles from './HowItWorks.module.css'
 
 const steps = [
   {
     num: 1,
     title: 'Get your number in your personal cabinet',
-    desc: 'To register with TempNumber Pro you only need to enter your email address. No ID information or other contacts.',
+    desc: 'To register with TEMP NUMBER PRO you only need to enter your email address. No ID information or other contacts.',
     align: 'left',
-    emoji: '💻',
+    Icon: FiMonitor,
   },
   {
     num: 2,
     title: 'Enter your phone number when signing up online',
     desc: 'We support 1500+ of the most popular social networks, messengers, marketplaces and web sites.',
     align: 'right',
-    emoji: '📱',
+    Icon: FiSmartphone,
   },
   {
     num: 3,
     title: 'You receive an SMS in your personal profile',
     desc: 'You enter the verification code you received on the site. From $0.05 per activation. The number of numbers and activations is unlimited.',
     align: 'left',
-    emoji: '✉️',
+    Icon: FiMessageSquare,
   },
 ]
 
@@ -58,7 +59,7 @@ export default function HowItWorks() {
               {/* Illustration */}
               <div className={styles.illustCol}>
                 <div className={styles.illustCircle}>
-                  <span className={styles.illustEmoji}>{step.emoji}</span>
+                  <step.Icon size={56} className={styles.illustEmoji} />
                 </div>
               </div>
             </div>

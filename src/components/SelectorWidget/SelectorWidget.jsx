@@ -1,43 +1,49 @@
 import { useState } from 'react'
 import { FiSearch, FiRefreshCw } from 'react-icons/fi'
+import {
+  FaTelegram, FaWhatsapp, FaYoutube, FaPaypal,
+  FaGoogle, FaFacebook, FaTwitter,
+  FaLinkedin, FaAmazon, FaEnvelope
+} from 'react-icons/fa'
+import { SiEbay, SiVk } from 'react-icons/si'
 import styles from './SelectorWidget.module.css'
 
 const countries = [
-  { flag: '🇺🇸', name: 'USA',         price: '$0.05' },
-  { flag: '🇨🇳', name: 'China',       price: '$0.07' },
-  { flag: '🇰🇿', name: 'Kazakhstan',  price: '$5.00' },
-  { flag: '🇲🇾', name: 'Malaysia',    price: '$0.08' },
-  { flag: '🇮🇩', name: 'Indonesia',   price: '$0.08' },
-  { flag: '🇵🇭', name: 'Philippines', price: '$0.10' },
-  { flag: '🇲🇲', name: 'Myanmar',     price: '$14.00' },
-  { flag: '🇻🇳', name: 'Vietnam',     price: '$0.10' },
-  { flag: '🇷🇴', name: 'Romania',     price: '$0.12' },
-  { flag: '🇵🇱', name: 'Poland',      price: '$0.12' },
-  { flag: '🇨🇦', name: 'Canada',      price: '$0.08' },
-  { flag: '🇬🇧', name: 'UK',          price: '$0.15' },
-  { flag: '🇩🇪', name: 'Germany',     price: '$0.12' },
-  { flag: '🇫🇷', name: 'France',      price: '$0.12' },
-  { flag: '🇧🇷', name: 'Brazil',      price: '$0.10' },
-  { flag: '🇮🇳', name: 'India',       price: '$0.07' },
-  { flag: '🇷🇺', name: 'Russia',      price: '$0.06' },
-  { flag: '🇺🇦', name: 'Ukraine',     price: '$0.08' },
-  { flag: '🇹🇷', name: 'Turkey',      price: '$0.09' },
-  { flag: '🇲🇽', name: 'Mexico',      price: '$0.10' },
+  { code: 'us', flag: 'https://flagcdn.com/w40/us.png', name: 'USA',         price: '$0.05' },
+  { code: 'cn', flag: 'https://flagcdn.com/w40/cn.png', name: 'China',       price: '$0.07' },
+  { code: 'kz', flag: 'https://flagcdn.com/w40/kz.png', name: 'Kazakhstan',  price: '$5.00' },
+  { code: 'my', flag: 'https://flagcdn.com/w40/my.png', name: 'Malaysia',    price: '$0.08' },
+  { code: 'id', flag: 'https://flagcdn.com/w40/id.png', name: 'Indonesia',   price: '$0.08' },
+  { code: 'ph', flag: 'https://flagcdn.com/w40/ph.png', name: 'Philippines', price: '$0.10' },
+  { code: 'mm', flag: 'https://flagcdn.com/w40/mm.png', name: 'Myanmar',     price: '$14.00' },
+  { code: 'vn', flag: 'https://flagcdn.com/w40/vn.png', name: 'Vietnam',     price: '$0.10' },
+  { code: 'ro', flag: 'https://flagcdn.com/w40/ro.png', name: 'Romania',     price: '$0.12' },
+  { code: 'pl', flag: 'https://flagcdn.com/w40/pl.png', name: 'Poland',      price: '$0.12' },
+  { code: 'ca', flag: 'https://flagcdn.com/w40/ca.png', name: 'Canada',      price: '$0.08' },
+  { code: 'gb', flag: 'https://flagcdn.com/w40/gb.png', name: 'UK',          price: '$0.15' },
+  { code: 'de', flag: 'https://flagcdn.com/w40/de.png', name: 'Germany',     price: '$0.12' },
+  { code: 'fr', flag: 'https://flagcdn.com/w40/fr.png', name: 'France',      price: '$0.12' },
+  { code: 'br', flag: 'https://flagcdn.com/w40/br.png', name: 'Brazil',      price: '$0.10' },
+  { code: 'in', flag: 'https://flagcdn.com/w40/in.png', name: 'India',       price: '$0.07' },
+  { code: 'ru', flag: 'https://flagcdn.com/w40/ru.png', name: 'Russia',      price: '$0.06' },
+  { code: 'ua', flag: 'https://flagcdn.com/w40/ua.png', name: 'Ukraine',     price: '$0.08' },
+  { code: 'tr', flag: 'https://flagcdn.com/w40/tr.png', name: 'Turkey',      price: '$0.09' },
+  { code: 'mx', flag: 'https://flagcdn.com/w40/mx.png', name: 'Mexico',      price: '$0.10' },
 ]
 
 const services = [
-  { icon: '💼', name: 'LinkedIn',       price: '$0.18' },
-  { icon: '💬', name: 'Tencent',        price: '$1.90' },
-  { icon: '🐟', name: 'Plenty Of Fish', price: '$0.12' },
-  { icon: '🟡', name: 'Yalla',          price: '$1.90' },
-  { icon: '🔑', name: 'Kolesa.kz',      price: '$0.18' },
-  { icon: '🇰🇷', name: 'Naver',          price: '$0.22' },
-  { icon: '🎬', name: 'Netflix',         price: '$0.24' },
-  { icon: '💬', name: 'ICQ',             price: '$0.38' },
-  { icon: '📱', name: 'Imo',             price: '$1.90' },
-  { icon: '💚', name: 'Michat',          price: '$2.32' },
-  { icon: '📞', name: 'WhatsApp',        price: '$0.09' },
-  { icon: '✈️', name: 'Telegram',        price: '$0.07' },
+  { Icon: FaLinkedin, name: 'LinkedIn',    price: '$0.18', color: '#0A66C2' },
+  { Icon: FaWhatsapp, name: 'WhatsApp',    price: '$0.09', color: '#25D366' },
+  { Icon: FaTelegram, name: 'Telegram',    price: '$0.07', color: '#0088cc' },
+  { Icon: FaGoogle,   name: 'Google',      price: '$0.05', color: '#EA4335' },
+  { Icon: FaFacebook, name: 'Facebook',    price: '$0.08', color: '#1877F2' },
+  { Icon: FaTwitter,  name: 'Twitter',     price: '$0.06', color: '#1DA1F2' },
+  { Icon: FaYoutube,  name: 'YouTube',     price: '$0.10', color: '#FF0000' },
+  { Icon: FaAmazon,   name: 'Amazon',      price: '$0.12', color: '#FF9900' },
+  { Icon: FaPaypal,   name: 'PayPal',      price: '$0.15', color: '#003087' },
+  { Icon: FaEnvelope, name: 'Gmail',       price: '$0.04', color: '#EA4335' },
+  { Icon: SiEbay,     name: 'eBay',        price: '$0.14', color: '#E53238' },
+  { Icon: SiVk,       name: 'VK',          price: '$0.08', color: '#0077FF' },
 ]
 
 export default function SelectorWidget() {
@@ -83,7 +89,7 @@ export default function SelectorWidget() {
                   className={`${styles.item} ${selectedCountry === c.name ? styles.selected : ''}`}
                   onClick={() => setSelectedCountry(c.name)}
                 >
-                  <span className={styles.flag}>{c.flag}</span>
+                  <img src={c.flag} alt={c.name} className={styles.flagIcon} />
                   <span className={styles.itemName}>{c.name}</span>
                   <span className={styles.itemPrice}>{c.price}</span>
                 </li>
@@ -121,7 +127,7 @@ export default function SelectorWidget() {
                   className={`${styles.item} ${selectedService === s.name ? styles.selected : ''}`}
                   onClick={() => setSelectedService(s.name)}
                 >
-                  <span className={styles.serviceIcon}>{s.icon}</span>
+                  <s.Icon size={18} color={s.color} className={styles.serviceIcon} />
                   <span className={styles.itemName}>{s.name}</span>
                   <span className={styles.itemPrice}>{s.price}</span>
                 </li>

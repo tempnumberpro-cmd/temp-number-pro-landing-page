@@ -62,9 +62,26 @@
   gap: 8px;
   font-size: 14px;
 }
-.flagCell span { font-size: 18px; }
 
-.serviceCell { color: var(--text-body); }
+.flagIcon {
+  width: 24px;
+  height: 18px;
+  border-radius: 3px;
+  object-fit: cover;
+  box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.08);
+  flex: 0 0 auto;
+}
+
+.serviceCell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-body);
+}
+
+.serviceIcon {
+  flex: 0 0 auto;
+}
 
 .activatedCell {
   color: var(--blue-primary);

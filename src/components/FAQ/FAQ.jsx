@@ -13,7 +13,7 @@ const faqs = [
   },
   {
     q: 'Do I need a SIM card to use my virtual number?',
-    a: 'No SIM card is required. Everything happens online — you receive the SMS directly in your TempNumber Pro account dashboard.',
+    a: 'No SIM card is required. Everything happens online - you receive the SMS directly in your TEMP NUMBER PRO account dashboard.',
   },
   {
     q: 'Will someone have access to my number after my rent is up?',
@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     q: 'What does it mean to receive SMS from website online?',
-    a: 'It means you get a temporary virtual phone number that receives text messages online, visible directly in your browser — no physical phone needed.',
+    a: 'It means you get a temporary virtual phone number that receives text messages online, visible directly in your browser - no physical phone needed.',
   },
   {
     q: 'What do I do if I can\'t buy a virtual number?',

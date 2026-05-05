@@ -1,4 +1,5 @@
 import { FaFacebook, FaTwitter, FaInstagram, FaYoutube, FaTelegramPlane } from 'react-icons/fa'
+import simIcon from '../../../assets/sim-card-icon.png'
 import styles from './Footer.module.css'
 
 const links = [
@@ -12,12 +13,9 @@ export default function Footer() {
       <div className="container">
         {/* Logo */}
         <div className={styles.logo}>
-          <span className={styles.logoBox}>SMS</span>
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-            <rect width="18" height="18" rx="4" fill="#60a5fa"/>
-            <path d="M4 9h10M9 4v10" stroke="#1a3a8f" strokeWidth="2" strokeLinecap="round"/>
-          </svg>
-          <span className={styles.logoText}>MAN</span>
+          <img src={simIcon} alt="TEMP NUMBER PRO" className={styles.logoIcon} />
+          <span className={styles.logoBox}>TEMP NUMBER</span>
+          <span className={styles.logoText}>PRO</span>
         </div>
 
         {/* Links grid */}

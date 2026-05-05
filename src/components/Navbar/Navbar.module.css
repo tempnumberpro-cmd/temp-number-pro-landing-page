@@ -23,20 +23,25 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: 2px;
+  gap: 7px;
   font-weight: 700;
   font-size: 17px;
   color: var(--text-dark);
   flex-shrink: 0;
 }
+
+.logoIcon {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+
 .logoBox {
   letter-spacing: -0.5px;
 }
-.logoMid {
-  display: flex;
-  align-items: center;
-}
 .logoText {
+  color: var(--blue-primary);
   letter-spacing: -0.5px;
 }
 
@@ -114,6 +119,51 @@
 }
 .langBtn:hover {
   border-color: var(--blue-primary);
+  color: var(--blue-primary);
+}
+
+.langSelector {
+  position: relative;
+}
+
+.flagIcon {
+  width: 20px;
+  height: 20px;
+  border-radius: 2px;
+  object-fit: cover;
+}
+
+.langDropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 6px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  min-width: 200px;
+  max-height: 400px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.langOption {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 14px;
+  border: none;
+  background: transparent;
+  text-align: left;
+  font-size: 14px;
+  color: var(--text-body);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.langOption:hover {
+  background: var(--blue-lighter);
   color: var(--blue-primary);
 }
 

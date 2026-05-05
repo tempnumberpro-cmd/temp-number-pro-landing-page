@@ -1,5 +1,5 @@
-import styles from './VirtualNumberDesc.module.css'
 import { FaGithub, FaFacebook, FaTwitter, FaGoogle } from 'react-icons/fa'
+import styles from './VirtualNumberDesc.module.css'
 
 export default function VirtualNumberDesc() {
   return (
@@ -10,8 +10,8 @@ export default function VirtualNumberDesc() {
           <div className={styles.chatWrap}>
             <div className={styles.phone2}>
               <div className={styles.chatBubble1}>Hey, what's your number?</div>
-              <div className={styles.chatBubble2}>Use TempNumber Pro 😊</div>
-              <div className={styles.chatBubble1}>It's verified! ✓✓</div>
+              <div className={styles.chatBubble2}>Use TEMP NUMBER PRO</div>
+              <div className={styles.chatBubble1}>It's verified!</div>
             </div>
           </div>
         </div>
@@ -19,8 +19,8 @@ export default function VirtualNumberDesc() {
         {/* Right: Text + Sign Up form card */}
         <div className={styles.right}>
           <div className={styles.textBlock}>
-            <p>TempNumber Pro allows you to buy a virtual number for registering with popular services at the best price online. Previously, in order to register an additional account on a social network or messenger, you had to get a new SIM card or ask your partner to share their phone.</p>
-            <p>First of all, it costs money to get a new SIM card. Secondly, it is a whole event — to come to the office, fill out a form with passport data...</p>
+            <p>TEMP NUMBER PRO allows you to buy a virtual number for registering with popular services at the best price online. Previously, in order to register an additional account on a social network or messenger, you had to get a new SIM card or ask your partner to share their phone.</p>
+            <p>First of all, it costs money to get a new SIM card. Secondly, it is a whole event - to come to the office, fill out a form with passport data...</p>
             <p className={styles.highlight}>On this site you can buy a virtual phone number for Telegram, WhatsApp, Viber, Instagram, Facebook, and any other popular platform from just 0.05$.</p>
             <p>Get a virtual phone number in just a few minutes!</p>
           </div>

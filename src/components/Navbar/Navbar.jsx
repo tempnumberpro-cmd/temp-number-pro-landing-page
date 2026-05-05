@@ -4,10 +4,10 @@ import simIcon from '../../../assets/sim-card-icon.png'
 import styles from './Navbar.module.css'
 
 const navLinks = [
-  { label: 'SMS Online', href: '#' },
-  { label: 'Rent', href: '#' },
-  { label: 'Blog', href: '#' },
-  { label: 'Help', href: '#' },
+  { label: 'SMS Online', href: '#sms-online' },
+  { label: 'Rent', href: '#rent' },
+  { label: 'Blog', href: '#blog' },
+  { label: 'Help', href: '#help' },
 ]
 
 const countries = [
@@ -96,7 +96,7 @@ export default function Navbar() {
     <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
       <div className={`container ${styles.inner}`}>
         {/* Logo */}
-        <a href="#" className={styles.logo}>
+        <a href="#home" className={styles.logo}>
           <img src={simIcon} alt="TEMP NUMBER PRO" className={styles.logoIcon} />
           <span className={styles.logoBox}>TEMP NUMBER</span>
           <span className={styles.logoText}>PRO</span>

@@ -21,12 +21,12 @@ const features = [
     title: 'Group Chat',
     desc: "We've created a special group chat for our customers.",
   },
-  {
-    icon: <FiMonitor size={28} />,
-    color: '#1e293b',
-    title: 'Get SMS on desktop!',
-    desc: 'We made a special solution for desktop users.',
-  },
+  // {
+  //   icon: <FiMonitor size={28} />,
+  //   color: '#1e293b',
+  //   title: 'Get SMS on desktop!',
+  //   desc: 'We made a special solution for desktop users.',
+  // },
 ]
 
 export default function FeaturesGrid() {

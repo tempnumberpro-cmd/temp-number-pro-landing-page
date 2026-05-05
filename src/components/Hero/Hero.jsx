@@ -4,8 +4,9 @@ import {
   FaGoogle, FaFacebook, FaTwitter,
   FaLinkedin, FaAmazon, FaEnvelope
 } from 'react-icons/fa'
-import { FiArrowDown } from 'react-icons/fi'
 import { SiEbay, SiVk } from 'react-icons/si'
+import appleStoreWhite from '../../../assets/apple-store-button-white.png'
+import googlePlayWhite from '../../../assets/google-play-icon-white.png'
 
 const floatingIcons = [
   // Top row
@@ -33,7 +34,7 @@ const floatingIcons = [
 
 export default function Hero() {
   return (
-    <section className={styles.hero}>
+    <section className={styles.hero} id="home">
       <div className={`container ${styles.inner}`}>
         {/* Left column */}
         <div className={styles.left}>
@@ -43,9 +44,13 @@ export default function Hero() {
             services <strong>without spam</strong> and{' '}
             <a href="#" className={styles.link}>disclosure of personal data.</a>
           </p>
-          <div className={styles.ctaRow}>
-            <button className={styles.btnWhite}>Receive SMS</button>
-            <button className={styles.btnOutline}>Rent number</button>
+          <div className={styles.storeRow}>
+            <a href="#" className={styles.storeLink} aria-label="Download on the App Store">
+              <img src={appleStoreWhite} alt="Download on the App Store" className={styles.storeBadge} />
+            </a>
+            <a href="#" className={styles.storeLink} aria-label="Get it on Google Play">
+              <img src={googlePlayWhite} alt="Get it on Google Play" className={styles.storeBadge} />
+            </a>
           </div>
         </div>
 

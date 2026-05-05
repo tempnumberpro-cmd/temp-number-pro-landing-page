@@ -30,6 +30,10 @@ html {
   scroll-behavior: smooth;
 }
 
+[id] {
+  scroll-margin-top: 76px;
+}
+
 body {
   font-family: var(--font);
   color: var(--text-body);

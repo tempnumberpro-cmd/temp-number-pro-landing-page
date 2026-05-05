@@ -2,7 +2,7 @@ import styles from './BuyRentCTA.module.css'
 
 export default function BuyRentCTA() {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="rent">
       <div className={`container ${styles.inner}`}>
         {/* Yellow arrow decoration */}
         <div className={styles.arrow}>

@@ -3,7 +3,7 @@ import styles from './VirtualNumberDesc.module.css'
 
 export default function VirtualNumberDesc() {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="blog">
       <div className={`container ${styles.inner}`}>
         {/* Left: Chat illustration */}
         <div className={styles.left}>

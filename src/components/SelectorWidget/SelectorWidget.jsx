@@ -60,7 +60,7 @@ export default function SelectorWidget() {
   )
 
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="sms-online">
       <div className="container">
         <h2 className={styles.heading}>
           Choose your country and service<br />receive SMS right now

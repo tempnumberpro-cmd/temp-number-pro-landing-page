@@ -37,7 +37,7 @@ export default function FAQ() {
   const [open, setOpen] = useState(0)
 
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="help">
       <div className="container">
         <h2 className={styles.heading}>Frequently Asked Questions</h2>
         <div className={styles.list}>

@@ -92,10 +92,10 @@ export default function Navbar() {
   }, [langOpen])
 
   return (
-    <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
+    <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`} data-no-toast>
       <div className={`container ${styles.inner}`}>
         {/* Logo */}
-        <a href="#home" className={styles.logo}>
+        <a href="#home" className={styles.logo} data-no-toast>
           <img src="/assets/sim-card-icon.png" alt="TEMP NUMBER PRO" className={styles.logoIcon} />
           <span className={styles.logoBox}>TEMP NUMBER</span>
           <span className={styles.logoText}>PRO</span>
@@ -105,7 +105,7 @@ export default function Navbar() {
         <ul className={styles.links}>
           {navLinks.map((link) => (
             <li key={link.label}>
-              <a href={link.href} className={styles.link}>
+              <a href={link.href} className={styles.link} data-no-toast>
                 {link.label}
                 {link.label === 'SMS Online' && (
                   <span className={styles.activeBar} />
@@ -121,6 +121,7 @@ export default function Navbar() {
             <button
               className={styles.langBtn}
               onClick={() => setLangOpen(!langOpen)}
+              data-no-toast
             >
               <img src={selectedCountry.flag} alt={selectedCountry.name} className={styles.flagIcon} />
               <FiChevronDown size={14} />
@@ -131,6 +132,7 @@ export default function Navbar() {
                   <button
                     key={country.code}
                     className={styles.langOption}
+                    data-no-toast
                     onClick={() => {
                       setSelectedCountry(country)
                       setLangOpen(false)
@@ -150,6 +152,7 @@ export default function Navbar() {
           className={styles.hamburger}
           onClick={() => setMenuOpen((o) => !o)}
           aria-label="Toggle menu"
+          data-no-toast
         >
           {menuOpen ? <FiX size={22} /> : <FiMenu size={22} />}
         </button>
@@ -160,6 +163,7 @@ export default function Navbar() {
         <div className={styles.mobileMenu}>
           {navLinks.map((link) => (
             <a key={link.label} href={link.href} className={styles.mobileLink}
+               data-no-toast
                onClick={() => setMenuOpen(false)}>
               {link.label}
             </a>

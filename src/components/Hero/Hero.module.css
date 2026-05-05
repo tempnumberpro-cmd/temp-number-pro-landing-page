@@ -71,6 +71,7 @@
 .storeLink {
   display: inline-flex;
   align-items: center;
+  position: relative;
   height: 54px;
   border-radius: 8px;
   transition: transform 0.15s, opacity 0.15s;
@@ -86,6 +87,23 @@
   height: 52px;
   object-fit: contain;
   display: block;
+}
+
+.comingSoon {
+  position: absolute;
+  right: 7px;
+  bottom: -9px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #facc15;
+  color: #111827;
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+  pointer-events: none;
 }
 
 .btnWhite {

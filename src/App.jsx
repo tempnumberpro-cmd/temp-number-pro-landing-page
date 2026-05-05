@@ -15,6 +15,7 @@ import styles from './App.module.css'
 
 export default function App() {
   const [toastVisible, setToastVisible] = useState(false)
+  const [toastMessage, setToastMessage] = useState('Please download the mobile app to use this feature.')
   const toastTimer = useRef(null)
 
   useEffect(() => {
@@ -22,7 +23,12 @@ export default function App() {
       const target = event.target.closest('button, a, [role="button"]')
 
       if (!target) return
+      if (target.closest('[data-no-toast]')) return
+      if (target.closest('nav')) return
+      if (target.closest('#help')) return
+      if (target.closest('footer')) return
 
+      setToastMessage(target.dataset.toastMessage || 'Please download the mobile app to use this feature.')
       setToastVisible(true)
       window.clearTimeout(toastTimer.current)
       toastTimer.current = window.setTimeout(() => {
@@ -57,7 +63,7 @@ export default function App() {
         role="status"
         aria-live="polite"
       >
-        Please download the mobile app to use this feature.
+        {toastMessage}
       </div>
     </div>
   )

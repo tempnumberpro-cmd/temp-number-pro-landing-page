@@ -49,12 +49,12 @@ export default function Navbar() {
         </ul>
 
         {/* Actions */}
-        <div className={styles.actions}>
+        {/* <div className={styles.actions}>
           <button className={styles.langBtn}>
             <FiGlobe size={18} />
             <FiChevronDown size={14} />
           </button>
-        </div>
+        </div> */}
 
         {/* Mobile Hamburger */}
         <button

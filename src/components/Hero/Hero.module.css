@@ -2,7 +2,7 @@
   background: linear-gradient(135deg, #1a3a8f 0%, #2563eb 60%, #3b82f6 100%);
   color: #fff;
   padding: 0;
-  overflow: visible;
+  overflow: hidden;
 }
 
 .inner {

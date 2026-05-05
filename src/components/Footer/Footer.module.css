@@ -91,6 +91,7 @@
   display: flex;
   gap: 14px;
   margin-top: 4px;
+  align-items: center;
 }
 
 .socialIcon {

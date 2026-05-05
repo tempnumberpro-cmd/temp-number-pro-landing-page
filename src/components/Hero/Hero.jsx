@@ -45,12 +45,13 @@ export default function Hero() {
             <a href="#" className={styles.link}>disclosure of personal data.</a>
           </p>
           <div className={styles.storeRow}>
+<a href="#" className={styles.storeLink} aria-label="Get it on Google Play">
+              <img src={googlePlayWhite} alt="Get it on Google Play" className={styles.storeBadge} />
+            </a>
             <a href="#" className={styles.storeLink} aria-label="Download on the App Store">
               <img src={appleStoreWhite} alt="Download on the App Store" className={styles.storeBadge} />
             </a>
-            <a href="#" className={styles.storeLink} aria-label="Get it on Google Play">
-              <img src={googlePlayWhite} alt="Get it on Google Play" className={styles.storeBadge} />
-            </a>
+            
           </div>
         </div>
 

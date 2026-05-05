@@ -87,7 +87,12 @@ export default function SelectorWidget() {
                 <li
                   key={c.name}
                   className={`${styles.item} ${selectedCountry === c.name ? styles.selected : ''}`}
+                  role="button"
+                  tabIndex={0}
                   onClick={() => setSelectedCountry(c.name)}
+                  onKeyDown={e => {
+                    if (e.key === 'Enter' || e.key === ' ') setSelectedCountry(c.name)
+                  }}
                 >
                   <img src={c.flag} alt={c.name} className={styles.flagIcon} />
                   <span className={styles.itemName}>{c.name}</span>
@@ -125,7 +130,12 @@ export default function SelectorWidget() {
                 <li
                   key={s.name}
                   className={`${styles.item} ${selectedService === s.name ? styles.selected : ''}`}
+                  role="button"
+                  tabIndex={0}
                   onClick={() => setSelectedService(s.name)}
+                  onKeyDown={e => {
+                    if (e.key === 'Enter' || e.key === ' ') setSelectedService(s.name)
+                  }}
                 >
                   <s.Icon size={18} color={s.color} className={styles.serviceIcon} />
                   <span className={styles.itemName}>{s.name}</span>

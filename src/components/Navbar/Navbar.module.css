@@ -17,6 +17,7 @@
   align-items: center;
   gap: 32px;
   height: 64px;
+  min-width: 0;
 }
 
 /* Logo */
@@ -28,6 +29,7 @@
   font-size: 17px;
   color: var(--text-dark);
   flex-shrink: 0;
+  min-width: 0;
 }
 
 .logoIcon {
@@ -39,10 +41,12 @@
 
 .logoBox {
   letter-spacing: -0.5px;
+  white-space: nowrap;
 }
 .logoText {
   color: var(--blue-primary);
   letter-spacing: -0.5px;
+  white-space: nowrap;
 }
 
 /* Links */
@@ -206,4 +210,21 @@
   .links { display: none; }
   .actions { display: none; }
   .hamburger { display: flex; }
+}
+
+@media (max-width: 420px) {
+  .inner {
+    gap: 12px;
+    height: 58px;
+  }
+
+  .logo {
+    gap: 5px;
+    font-size: 14px;
+  }
+
+  .logoIcon {
+    width: 30px;
+    height: 30px;
+  }
 }
